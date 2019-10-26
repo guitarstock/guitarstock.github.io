@@ -106,9 +106,10 @@ nav {
 .video_container {
     display: flex;
     justify-content: center;
+    
 
 }
-video {
+.body_explore_image_row video {
     width: 480px;
     height: 270px;
     cursor: pointer;
@@ -158,8 +159,10 @@ body {
     position: relative;
     width: 100%;
     height:70%;
-    opacity: 0.8
-    
+    opacity: 0.8;
+    max-height: 700px;
+    object-fit:cover;
+   
 }
 
 
