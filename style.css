@@ -8,48 +8,85 @@
 }
 /*____________________NAVBAR_____________________*/
 
+#guitar_logo {
+    max-width: 300px;
+    float: left;
+    margin: 10px;
+    margin-left: -30px;
+}
+nav {
+    float: right;
+    align-items: center;
+  }
+
 .nav_parent {
-    background-color: white;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
     margin: auto;
+    width: 100%;
+    background-color: white;
+}
+.nav {
+    width: 90%;
+    margin: auto;
+
 }
 
-.nav {
-    display: flex;
-    justify-content:space-between;
-    align-items:center;
-    align-self:center;
-    margin-left:1rem;
-    margin-right:1rem;
+.nav_logo {
+    float: left;
+    cursor: pointer;
+    margin-top: 0.5em;
+    color: #c91a00;
+    font-size: 30px;
+    font-weight: bold;
+    
+   
 }
-#logo {
-    max-width: 15rem;
-    margin:0.5rem;
-    background-color: white;
-    display: flex;
+.nav_logo a {
+    color: #c91a00;
 }
+
 
 
 .nav_options {
-    display: flex;
-    flex-direction:row;
-    align-items: flex-end;
-
+    margin-top: 15%;
+    display: inline-block;
+    position: relative;
 }
 
 .nav_options li {
     display: inline-block;
-    padding: 0 1rem;
+    padding: 0 5px;
 }
 
 .nav_options li a {
-    color: #42b6f5;
+    color: #c91a00;
     font-weight: normal;
 }
 
 .nav_options li a:hover, .nav_options .nav_button_current a {
-    color:#96cdeb;
+    color:#c91b008a;;
   }
+.nav_button {
+    cursor: pointer;
+    padding: 0.5em;
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+    color: #c91a00;
+    border: 2px solid white;
+    display: inline-block;
+    border-radius: 2em;
+    font-size: 20px;
+}
 
+
+.nav_button:hover {
+    background-color: #c91a00;
+    border: 2px solid #c91a00;
+    color: white; 
+}
 
 #cart_badge {  
     position: absolute;
@@ -57,7 +94,7 @@
     right: -25x;
     padding: 5px 10px;
     border-radius: 100%;
-    background: #42b6f5;
+    background: #c91a00;
     color: white;
     font-size: 10px;
     
@@ -69,10 +106,12 @@
 .video_container {
     display: flex;
     justify-content: center;
+    
 
 }
 .body_explore_image_row video {
-
+    width: 480px;
+    height: 270px;
     cursor: pointer;
     position: relative;
     opacity: 0.8;
@@ -95,28 +134,22 @@ body {
 }
 
 .body_0000{
-    
+    margin: auto;
     text-align: center;
-    background-color: #42b6f5;
+    background-color: rgb(83, 83, 83);
     display: flex;
     justify-content: center;
     
   
 }
 
-.body-question {
+#body-question {
     color:white;
-    font-size: 3rem;
+    margin-top: 0.7em;
+    font-size: 25px;
     padding:0;
     font-weight: bold;
-    display:flex;
-}
 
-.body-question-small {
-    color:white;
-   
-    font-size: 1.5rem;
-   
 }
 
 
@@ -127,12 +160,16 @@ body {
     width: 100%;
     height:70%;
     opacity: 0.8;
-    max-height: 40rem;
+    max-height: 700px;
     object-fit:cover;
+   
 }
 
 
 .body_00_2 {
+    
+    min-width: 440px;
+    min-height: 271px;
     position: absolute;
     /*background-color: rgb(255, 255, 255);*/
     z-index: 2;
@@ -148,7 +185,7 @@ body {
 .scroll_down {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 12rem;
+    margin-top: 12em;
     position: absolute;
     align-self: center;
     align-items: center;
@@ -159,7 +196,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     
-    margin-top: 12rem;
+    margin-top: 12em;
     position: absolute;
     align-self: center;
     align-items: center;
@@ -182,7 +219,7 @@ body {
 
 #body_03 {
     display:none;
-    margin-top: 2rem;
+    margin-top: 2em;
 
 }
 
@@ -192,10 +229,10 @@ body {
 
 .separator_container {
     background-color:white;
-    padding: 2rem;
+    padding: 2em;
 }
 .body_separator {
-    font-size: 1.5rem;
+    font-size: 25px;
     color: rgb(87, 87, 87);
     
 
@@ -209,13 +246,13 @@ body {
 
 .body-button {
     color: white;
-    background-color: #42b6f5;
-    font-size: 1rem;
-    padding: 1rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
-    border-radius: 2rem;
-    border: 2px solid #42b6f5;
+    background-color: #c91a00;
+    font-size: 20px;
+    padding: 1em;
+    padding-left: 4em;
+    padding-right: 4em;
+    border-radius: 2em;
+    border: 2px solid #c91a00;
     cursor: pointer;
     font-weight: bolder;
     
@@ -223,43 +260,29 @@ body {
 
 .body-button:hover {
     background-color: white;
-    border: 2px solid #42b6f5;
-    color: #42b6f5;
+    border: 2px solid #c91a00;
+    color: #c91a00;
 
 }
 
 .body-input {
+    padding: 1em;
+    border-radius: 2em;
+    font-size: 12px;
+} 
+#search_bar {
+    text-align: center;
     color: black;
-    background-color: white;
-    font-size: 1rem;
-    padding: 1rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
-    border-radius:2rem;
-   
+    background-color: #ffffff;
+    font-size: 20px;
+    margin: 1em;
+    padding-left: 3em;
+    padding-right: 3em;
+    border-radius: 2em;
+    
     border: 1px solid white;
     cursor: pointer;
-    font-weight: bolder;
-
-} 
-
-.search-icon {
-    max-width:1.5rem;
-    background-color: #42b6f5;
     
-    padding: 1rem;
-    border-radius:2rem;
-    cursor: pointer;
-    font-weight: bolder;
-}
-
-.search_slot {
-    margin:2rem;
-    display:flex;
-    flex-direction:row;
-    justify-content:center;
-    align-items:center;
-    align-self:center;
 }
 
 #search_bar:hover {
@@ -270,7 +293,7 @@ body {
 
 .divider {
     
-    padding: 5rem;
+    padding: 5em;
     margin:auto;
    
 
@@ -279,13 +302,12 @@ body {
 
 .divider-child .lip{
     
-    margin: 0.5rem;
+    margin: 0.5em;
 
 }
 .proof {
     display: flex;
-    
-    padding: 2rem;
+    padding: 2em;
     justify-content: center;
     color: rgb(87, 87, 87);
     margin:auto;
@@ -298,25 +320,14 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin-left: 3em;
+    margin-right: 3em;
     
-
-}
-
-.proof_column_sotto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content:center;
-    margin:1em;
 }
 
 .proof_icon {
-    max-width: 5rem;
-    opacity: 0.3;
-}
-
-.proof-company {
-    width: 30rem;
+    max-width: 100px;
+    opacity: 0.7;
 }
 /*____________________/EXPLORE_____________________*/
 
@@ -328,12 +339,12 @@ body {
     
 }
 .body_explore_0000 {
-    margin-top: 2rem;
+    margin-top: 8em;
 }
 
 .body_explore_00_01 {
-    padding: 2rem;
-    font-size: 1rem;
+    padding: 2em;
+    font-size: 20px;
 }
 /*____________________/CART_____________________*/
 
@@ -341,7 +352,7 @@ body {
 
 .cart_added {
     display:none;
-    font-size: 2rem;
+    font-size: 50px;
     position: absolute;
     z-index: 2;
     margin: auto;
@@ -351,7 +362,7 @@ body {
 
 }
 .body_cart_container{
-    margin-top: 20rem;
+    margin-top: 10em;
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
@@ -370,10 +381,11 @@ body {
 }
 #body_cart_empty {
     align-self: center;
-    
+    width: 270px;
     background-color: white;
-    padding: 2rem;
-   
+    padding: 2em;
+    padding-left: 5em;
+    padding-right: 5em;
     border: 0.5px solid rgb(231, 231, 231);
     display:flex;
     justify-content: center;
@@ -384,7 +396,7 @@ body {
 
 
 .body_cart_row {
-    padding: 3rem;
+    padding: 3em;
     background-color: white;
     border: 0.5px solid rgb(231, 231, 231);
     display:flex;
@@ -398,20 +410,20 @@ body {
 
 .body_cart_remove_button {
     color: white;
-    background-color: #42b6f5;
+    background-color: #c91a00;
     font-size: 10px;
     padding: 1em;
     padding-left: 2em;
     padding-right: 2em;
     border-radius: 2em;
-    border: 2px solid #42b6f5;
+    border: 2px solid #c91a00;
     cursor: pointer;
 }
 
 .body_cart_remove_button:hover {
-    color: #42b6f5;
+    color: #c91a00;
     background-color: white;
-    border: 2px solid #42b6f5;
+    border: 2px solid #c91a00;
   
 }
 
@@ -448,88 +460,10 @@ footer {
   }
   
 
- @media only screen and (max-width: 800px) { 
+/*  @media only screen and (max-width: 800px) { 
+    .html { display: none; }
 
-    .nav_options {
-        flex-direction:column;
-        margin-left:-3rem;
-    
-    }
-
-    .nav {
-      
-        margin-left:0.1rem;
-    }
-
-    .body-question {
-        font-size: 1.5rem;
-    }
-
-    .body-question-small {
-        font-size: 1rem;
-    }
-
-    .body-button {
-        font-size: 1rem;
-        padding: 0.5rem;
-        padding-left: 2rem;
-        padding-right: 2rem;
-        border-radius: 2rem;
-        
-    }
-    .body-input {
-       
-        font-size: 1rem;
-        padding: 1rem; 
-       
-     
-    
-    } 
-    
-    .search-icon {
-        width:1rem;
-        font-size: 1rem;
-        padding: 1rem;
-       
-    }
-    
-    .search_slot {
-        margin:1rem;
-        
-    }
- 
-    .proof_icon {
-        max-width: 4rem;
-    }
-
-    
-    .body-button:hover {
-        background-color: white;
-        border: 2px solid #42b6f5;
-        color: #42b6f5;
-    
-    }
- 
-     .proof {
-        flex-direction: column;
-
-     }
-    .proof_column {
-        flex-direction: row;
-        
-    }
-    .proof_column_sotto {
-        margin:1.5em;
-        display:flex;
-        float:left;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        
-    }
-    .proof-company {
-        width: 20rem;
-    }
     
 }
 
+*/
